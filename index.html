@@ -32,9 +32,7 @@
         <tr> <!--first row -->
           <td>Text</td>
            <td>
-            <form> 
               <input type="textbox" id="textfield">
-            </form>
           </td>
           <td id="tText"</td>
         </tr>
@@ -44,9 +42,7 @@
             Password
           </td>
           <td>
-            <form>
               <input type="password" id="password">
-            </form>
           </td>
           <td id="tPass"</td>
         </tr>
@@ -78,10 +74,10 @@
             Checkbox
           </td>
           <td>
-            <input type="checkbox" name="destination" value="LA"> LA
-            <input type="checkbox" name="destination" value="NY"> NY   <input type="checkbox" name="destination" value="WA DC"> WA DC    
+            <input type="checkbox" name="destination" id="la"> LA
+            <input type="checkbox" name="destination" id="ny"> NY   <input type="checkbox" name="destination" id="wadc"> WA DC    
           </td>
-          <td id="checkbox"</td>
+          <td id="tCheckbox"</td>
         </tr>
         
         <tr><!--sixth row -->
@@ -89,8 +85,9 @@
             Color
           </td>
           <td>
-            <input type="color" name="favorite">
+            <input type="color" id="favoriteColor">
           </td>
+          <td id="tColor"</td>
         </tr>
         
         <tr><!--seventh row -->
@@ -98,8 +95,9 @@
             Date
           </td>
           <td>
-            <input type="date" name="date">
+            <input type="date" id="date">
           </td>
+          <td id="tDate"</td>
         </tr>
         
         <tr><!--eighth row -->
@@ -107,8 +105,9 @@
             Local Time
           </td>
           <td>
-            <input type="time" name="time">
+            <input type="time" id="time">
           </td>
+          <td id="tTime"</td>
         </tr>
         
         <tr><!--ninth row -->
@@ -116,11 +115,9 @@
             Email
           </td>
           <td>
-            <form>
-            <input type="email" id="textfield">
-            </form>
+            <input type="email" id="email">
           </td>
-          <td id="tData"</td>
+          <td id="tEmail"</td>
         </tr>
         
         <tr><!--tenth row -->
@@ -128,8 +125,9 @@
             Month
           </td>
           <td>
-            <input type="month" name="month">
+            <input type="month" id="month">
           </td>
+          <td id="tMonth"</td>
         </tr>
         
         <tr><!--eleventh row -->
@@ -137,8 +135,9 @@
             Number
           </td>
           <td>
-            <input type="number" name="amount" min="0" max="10">
+            <input type="number" id="amount" min="0" max="10">
           </td>
+          <td id="tAmount"</td>
         </tr>
         
         <tr><!--twelfth row -->
@@ -146,7 +145,7 @@
             Range
           </td>
           <td>
-            0<input type="range" name="range" min="0" max="10">10
+            <label>0</label><input type="range" name="range" min="0" max="10"><label>10</label>
           </td>
         </tr>
         

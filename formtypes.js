@@ -9,6 +9,15 @@ $(document).ready(function () {
   var tPass = $('#tPass');
   var tSubmit = $('#tSubmit');
   var tRadio = $('#tRadio');
+  var tCheckbox = $('#tCheckbox');
+  var tColor = $('#tColor');
+  var tDate = $('#tDate');
+  var tTime = $('#tTime');
+  var tEmail = $('#tEmail');
+  var tMonth = $('#tMonth');
+  var tAmount = $('#tAmount');
+  
+  var favoriteColor = $('#favoriteColor');
   $('#tBody').keypress(function (e) {
     var key = e.which;
     if (key === 13) { // key code for 'enter'
@@ -16,31 +25,60 @@ $(document).ready(function () {
       tText.text(textfield);
       var password = $('#password').val();
       tPass.text(password);
+      var time = $('#time').val(); // time not working 
+      tTime.text(time);
+      var email = $('#email').val();
+      tEmail.text(email);
+      var amount = $('#amount').val();
+      tAmount.text(amount);
       e.preventDefault();
     }
   });
   
-  $('input[name="color"]').change(function () {
-     console.log("working");
+  $('input[name="color"]').click(function () {
     if ($(this).val() === "green") {
       tRadio.text("green");
-    } 
-    else if ($(this).val() === "blue") {
-        tRadio.text("blue");
-      }
-    else if ($(this).val() ==="red") {
+    } else if ($(this).val() === "blue") {
+      tRadio.text("blue");
+    } else {
       tRadio.text("red");
     }
   });
-
-//    if else ($(this).attr('id') === 'blue') {
-//    $
-//  }
-
   
-  tSubmit.click(function () {
-    event.preventDefault;        
+  console.log("working");
+  $(":checkbox").click(function () {
+    var str = "";
+  
+    if ($("#la").is(':checked')) {
+      str = str + " LA";
+    }
+    if ($("#ny").is(':checked')) {
+      str = str + " NY";
+    }
+    if ($("#wadc").is(':checked')) {
+      str = str + " WA DC";
+    }
+    tCheckbox.text(str);
   });
+  
+  favoriteColor.click(function () { //color to hex not working
+    favoriteColor.val(); 
+    favoriteColor.toHexString();
+    tColor.html(favoriteColor);
+    event.preventDefault;
 });
 
-console.log("working");
+  tSubmit.click(function () { //submit
+    event.preventDefault;       
+  });
+  $('input[type="date"]').click(function () { //date not working
+    var date = $('#date').val();
+    tDate.text(date);
+  });
+  $('input[type="month"]').click(function () { //month not working
+    var month = $('#month').val();
+    tMonth.text(month);
+  });
+
+});
+
