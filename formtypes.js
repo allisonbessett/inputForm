@@ -7,6 +7,8 @@
 $(document).ready(function () {
   var tText = $('#tText');
   var tPass = $('#tPass');
+  var tSubmit = $('#tSubmit');
+  var tRadio = $('#tRadio');
   $('#tBody').keypress(function (e) {
     var key = e.which;
     if (key === 13) { // key code for 'enter'
@@ -17,5 +19,24 @@ $(document).ready(function () {
       e.preventDefault();
     }
   });
-  console.log("working");
+  
+  $('input[name="color"]').change(function () {
+     console.log("working");
+    if($(this).val() === "green") {
+//    if($('input: radio[name=color]').val() ==="green") {
+      tRadio.text("green");
+      }
+    });
+//    if($(this).attr('id') === 'green') {
+
+//    if else ($(this).attr('id') === 'blue') {
+//    $
+//  }
+
+  
+  tSubmit.click(function () {
+    event.preventDefault;         
+  });
 });
+
+  console.log("working");
