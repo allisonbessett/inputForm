@@ -22,12 +22,16 @@ $(document).ready(function () {
   
   $('input[name="color"]').change(function () {
      console.log("working");
-    if($(this).val() === "green") {
-//    if($('input: radio[name=color]').val() ==="green") {
+    if ($(this).val() === "green") {
       tRadio.text("green");
+    } 
+    else if ($(this).val() === "blue") {
+        tRadio.text("blue");
       }
-    });
-//    if($(this).attr('id') === 'green') {
+    else if ($(this).val() ==="red") {
+      tRadio.text("red");
+    }
+  });
 
 //    if else ($(this).attr('id') === 'blue') {
 //    $
@@ -35,8 +39,8 @@ $(document).ready(function () {
 
   
   tSubmit.click(function () {
-    event.preventDefault;         
+    event.preventDefault;        
   });
 });
 
-  console.log("working");
+console.log("working");
