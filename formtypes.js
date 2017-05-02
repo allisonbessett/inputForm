@@ -5,32 +5,63 @@
 /*global $, jQuery, alert*/
 
 $(document).ready(function () {
-  var tText = $('#tText');
-  var tPass = $('#tPass');
-  var tSubmit = $('#tSubmit');
-  var tRadio = $('#tRadio');
-  var tCheckbox = $('#tCheckbox');
-  var tColor = $('#tColor');
-  var tDate = $('#tDate');
-  var tTime = $('#tTime');
-  var tEmail = $('#tEmail');
-  var tMonth = $('#tMonth');
-  var tAmount = $('#tAmount');
+    var tText = $('#tText'), tPass = $('#tPass'), tSubmit = $('#tSubmit'),
+    tRadio = $('#tRadio'), tCheckbox = $('#tCheckbox'), tColor = $('#tColor'),
+    tDate = $('#tDate'), tLocal = $('#tLocal'), tEmail = $('#tEmail'),
+    tMonth = $('#tMonth'), tAmount = $('#tAmount'), 
+    tDate = $('#tDate'), tMonth = $('#tMonth'), tRange = $('#tRange'), 
+    tSearch = $('#tSearch'), tTel = $('#tTel'), tColor = $('#tColor'), 
+    tLink = $('#tLink'), tWeek = $('#tWeek'), tArea = $('#tArea'), tSelect = $('#tSelect');
   
-  var favoriteColor = $('#favoriteColor');
+  
   $('#tBody').keypress(function (e) {
     var key = e.which;
     if (key === 13) { // key code for 'enter'
       var textfield = $('#textfield').val();
       tText.text(textfield);
+      
       var password = $('#password').val();
       tPass.text(password);
-      var time = $('#time').val(); // time not working 
-      tTime.text(time);
+      
+//      var color = $('#color').val();
+//      color.toHexString();
+//      tColor.text(color);
+      
+      var date = $('#date').val();
+      tDate.text(date);
+      
+      var local = $('#local').val(); 
+      tLocal.text(local);
+      
       var email = $('#email').val();
       tEmail.text(email);
+      
+      var month = $('#month').val();
+      tMonth.text(month);
+      
       var amount = $('#amount').val();
       tAmount.text(amount);
+      
+      var range = $('#range').val();
+      tRange.text(range);
+      
+      var search = $('#search').val();
+      tSearch.text(search);
+      var tel = $('#tel').val();
+      tTel.text(tel);
+      
+      var link = $('#link').val();
+      tLink.text(link);
+      
+      var week = $('#week').val();
+      tWeek.text(week);
+      
+      area = $('#area').val();
+      tArea.text(area);
+      
+      var select = $('#select').val();
+      tSelect.text(select);
+      
       e.preventDefault();
     }
   });
@@ -60,24 +91,15 @@ $(document).ready(function () {
     }
     tCheckbox.text(str);
   });
-  
-  favoriteColor.click(function () { //color to hex not working
-    favoriteColor.val(); 
-    favoriteColor.toHexString();
-    tColor.html(favoriteColor);
-    event.preventDefault;
-});
+//  
+//  favoriteColor.click(function () { //color to hex not working
+//    favoriteColor.spectrum("get"); 
+//      favoriteColor.toHexString();
+//      tColor.html(favoriteColor);
+//});
 
   tSubmit.click(function () { //submit
     event.preventDefault;       
-  });
-  $('input[type="date"]').click(function () { //date not working
-    var date = $('#date').val();
-    tDate.text(date);
-  });
-  $('input[type="month"]').click(function () { //month not working
-    var month = $('#month').val();
-    tMonth.text(month);
   });
 
 });
