@@ -14,56 +14,56 @@ $(document).ready(function () {
     tLink = $('#tLink'), tWeek = $('#tWeek'), tArea = $('#tArea'), tSelect = $('#tSelect');
   
   
-  $('#tBody').keypress(function (e) {
-    var key = e.which;
-    if (key === 13) { // key code for 'enter'
-      var textfield = $('#textfield').val();
-      tText.text(textfield);
-      
-      var password = $('#password').val();
-      tPass.text(password);
-      
-//      var color = $('#color').val();
-//      color.toHexString();
-//      tColor.text(color);
-      
-      var date = $('#date').val();
-      tDate.text(date);
-      
-      var local = $('#local').val(); 
-      tLocal.text(local);
-      
-      var email = $('#email').val();
-      tEmail.text(email);
-      
-      var month = $('#month').val();
-      tMonth.text(month);
-      
-      var amount = $('#amount').val();
-      tAmount.text(amount);
-      
-      var range = $('#range').val();
-      tRange.text(range);
-      
-      var search = $('#search').val();
-      tSearch.text(search);
-      var tel = $('#tel').val();
-      tTel.text(tel);
-      
-      var link = $('#link').val();
-      tLink.text(link);
-      
-      var week = $('#week').val();
-      tWeek.text(week);
-      
-      area = $('#area').val();
-      tArea.text(area);
-      
-      var select = $('#select').val();
-      tSelect.text(select);
-      
-      e.preventDefault();
-    }
+  $('#tBody').change(function (e) {
+    
+//    var key = e.which;
+//    if (key === 13) { // key code for 'enter'
+    var textfield = $('#textfield').val();
+    tText.text(textfield);
+
+    var password = $('#password').val();
+    tPass.text(password);
+
+    var color = $('#color').val();
+    tColor.text(color);
+
+    var date = $('#date').val();
+    tDate.text(date);
+
+    var local = $('#local').val(); 
+    tLocal.text(local);
+
+    var email = $('#email').val();
+    tEmail.text(email);
+
+    var month = $('#month').val();
+    tMonth.text(month);
+
+    var amount = $('#amount').val();
+    tAmount.text(amount);
+
+    var range = $('#range').val();
+    tRange.text(range);
+
+    var search = $('#search').val();
+    tSearch.text(search);
+    var tel = $('#tel').val();
+    tTel.text(tel);
+
+    var link = $('#link').val();
+    tLink.text(link);
+
+    var week = $('#week').val();
+    tWeek.text(week);
+
+    var area = $('#area').val();
+    tArea.text(area);
+
+    var select = $('#select').val();
+    tSelect.text(select);
+
+    e.preventDefault();
+  
   });
   
   $('input[name="color"]').click(function () {
