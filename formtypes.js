@@ -91,12 +91,6 @@ $(document).ready(function () {
     }
     tCheckbox.text(str);
   });
-//  
-//  favoriteColor.click(function () { //color to hex not working
-//    favoriteColor.spectrum("get"); 
-//      favoriteColor.toHexString();
-//      tColor.html(favoriteColor);
-//});
 
   tSubmit.click(function () { //submit
     event.preventDefault;       
